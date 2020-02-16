@@ -7,7 +7,9 @@ export class CartService {
   constructor() { }
 
   addToCart(product) {
-    this.items[product] = 1
+    this.items[product]
+      ? this.items[product]++
+      : this.items[product] = 1
   }
 
   removeFromCart(product) {
